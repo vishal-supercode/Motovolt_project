@@ -1,0 +1,432 @@
+/* =========================
+   Hero Section
+========================= */
+
+.hero {
+  position: relative;
+
+  width: 100%;
+
+  /*
+   * Keep the hero slightly taller than the viewport.
+   * This pushes the stats below the initial viewport.
+   */
+  height: calc(100vh + 110px);
+
+  overflow: hidden;
+
+  background-color: var(--color-2);
+  color: var(--color-4);
+
+
+  &__background {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center center;
+
+    transform:scale(1.9) translateY(-15%) translateX(-27px);
+    transform-origin: center center;
+
+    z-index: 0;
+  }
+
+  &__content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.12) 0%,
+    rgba(0, 0, 0, 0.02) 50%,
+    rgba(0, 0, 0, 0.18) 100%
+    );
+
+    z-index: 1;
+
+    pointer-events: none;
+  }
+}
+
+
+/* =========================
+   Hero Navigation
+========================= */
+
+.hero-nav {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 70px);
+  margin: 30px auto 0;
+  gap: 14px;
+
+  /* =========================
+     Logo Block
+  ========================= */
+
+  &__logo {
+    width: 236px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    padding: 0 16px;
+    background: var(--color-2);
+    border-radius: 8px;
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+
+    img {
+      display: block;
+      width: auto;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  /* =========================
+     Menu Block
+  ========================= */
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    height: 62px;
+    padding: 0 16px 0 38px;
+    background: var(--color-2);
+    border-radius: 8px;
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 48px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    a {
+      color: var(--color-6);
+      text-decoration: none;
+      font-family: var(--font-1);
+      font-size: 14px;
+      font-weight: 400;
+      white-space: nowrap;
+      transition: opacity 0.2s ease;
+    }
+  }
+
+
+  /* =========================
+     Book Now
+  ========================= */
+
+  &__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 127px;
+    height: 37px;
+    flex-shrink: 0;
+    background: var(--color-1);
+    color: var(--color-4) !important;
+    border-radius: 4px;
+    text-decoration: none;
+    font-family: var(--font-1);
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+    gap: 10px
+  }
+}
+
+/* =========================
+   Hero Main Content
+========================= */
+
+.hero-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-xl) var(--container-padding) var(--space-md);
+}
+
+/* =========================
+   Product Name
+========================= */
+
+.hero-product {
+  position: absolute;
+  top: 20%;
+  left: 6.7%;
+  width: 320px;
+  height: auto;
+  margin: 0;
+  z-index: 3;
+}
+
+/* =========================
+   Hero Title
+========================= */
+
+.hero-title {
+  position: absolute;
+  top: 21%;
+  right: 4.5%;
+  width: 265px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  color: #fff;
+  text-align: right;
+  z-index: 3;
+}
+
+.hero-title-small {
+  font-size: 28px;
+  font-weight: 500;
+  font-family: var(--font-2);
+  line-height: 1.4;
+  white-space: nowrap;
+  letter-spacing: 2%;
+}
+
+.hero-title-large {
+  font-size: 48.52px;
+  font-weight: 650;
+  font-family: var(--font-2);
+  line-height: 1.416;
+  white-space: nowrap;
+}
+
+/* =========================
+   Hero Bottom
+========================= */
+
+.hero-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-inline: 4% 2%;
+}
+
+/* =========================
+   Stats
+========================= */
+
+.hero-stats {
+  display: flex;
+  align-items: flex-end;
+  gap: 42px;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  &__value {
+    display: flex;
+    align-items: baseline;
+    gap: 3px;
+    font-family: var(--font-3);
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 1;
+  }
+
+  &__unit {
+    font-size: 0.42em;
+    text-transform: uppercase;
+  }
+
+  &__label {
+    font-family: var(--font-1);
+    color: var(--color-5);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+
+/* =========================
+   Slider Indicators
+========================= */
+
+.hero-slider {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding-bottom: 8px;
+
+  &__line {
+    display: block;
+    width: 65px;
+    height: 3px;
+    border-radius: 1px;
+    background: rgba(255, 255, 255, 0.35);
+
+    &--active {
+      background: var(--color-4);
+    }
+  }
+}
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 1024px) {
+  .hero-nav {
+    width: calc(100% - 40px);
+
+    &__menu {
+      gap: 18px;
+    }
+  }
+
+  .hero-main {
+    padding-inline: 20px;
+  }
+
+  .hero-tagline {
+    margin-right: 0;
+  }
+
+  .hero-stats {
+    gap: 25px;
+  }
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 720px;
+
+    &__content {
+      min-height: 720px;
+    }
+
+    &__background {
+      object-position: center;
+    }
+  }
+
+  .hero-nav {
+    width: calc(100% - 24px);
+    margin-top: 12px;
+
+    min-height: 50px;
+
+    &__logo {
+      width: 100px;
+      height: 34px;
+    }
+
+    &__menu {
+      display: none;
+    }
+
+    &__cta {
+      margin-left: auto;
+
+      min-width: 90px;
+      height: 32px;
+
+      padding-inline: 12px;
+
+      font-size: 10px;
+    }
+  }
+
+  .hero-main {
+    padding: 50px 18px 25px;
+  }
+
+  .hero-product {
+    font-size: 42px;
+  }
+
+  .hero-tagline {
+    align-self: flex-end;
+
+    margin-top: 25px;
+
+    max-width: 200px;
+
+    font-size: 28px;
+  }
+
+  .hero-bottom {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
+  }
+
+  .hero-stats {
+    justify-content: space-between;
+    gap: 15px;
+
+    &__value {
+      font-size: 27px;
+    }
+  }
+
+  .hero-slider {
+    align-self: flex-end;
+  }
+}
+
+/* =========================
+   WordPress Admin Bar
+========================= */
+
+.admin-bar {
+  .hero {
+    min-height: calc(100vh - 32px);
+  }
+
+  .hero__content {
+    min-height: calc(100vh - 32px);
+  }
+}
+
+@media screen and (max-width: 782px) {
+  .admin-bar {
+    .hero {
+      min-height: calc(100vh - 46px);
+    }
+
+    .hero__content {
+      min-height: calc(100vh - 46px);
+    }
+  }
+}

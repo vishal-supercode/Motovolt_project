@@ -1,24 +1,11 @@
 @use 'partials/variables';
 @use 'partials/base';
+@use 'partials/spacing';
+@use 'partials/utilities';
+@use 'partials/hero';
 
 body {
   margin: 0;
+  padding: 0;
   // background-color: variables.$color-white;
-}
-
-// body {
-// 	background: red !important;
-// }
-
-.hero {
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-
-	&__image {
-		display: block;
-		width: 100%;
-		height: auto;
-	}
 }
