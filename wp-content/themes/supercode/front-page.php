@@ -103,9 +103,9 @@ get_header('home');
 
             <p class="intro-section__description">
                 Your Motovolt will turn heads at the signal. But the real beauty is inside the
-                <br/>
+                <br />
                 motor controller, the battery, the chassis.
-                <br/>
+                <br />
                 They decide how it rides, how long it lasts, and how wide the smile on your face
                 is when you zoom off as the signal turns green.
             </p>
@@ -131,7 +131,100 @@ get_header('home');
 
     <section class="bento-section">
         <div class="container bento-section__content">
-            
+
+            <h2 class="bento-section__heading">
+                Your <span>Motovolt</span> Journey Starts Now.
+            </h2>
+
+            <div class="bento-grid">
+
+                <!-- Klimbr -->
+                <article class="bento-card">
+                    <img class="bento-card__image"
+                        src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/klimbr-card.png'); ?>"
+                        alt="Motovolt Klimbr electric motorcycle">
+
+                    <div class="bento-card__top">
+                        <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/bento-klmbr-headline.png'); ?>"
+                            alt="Klimbr">
+                    </div>
+
+                    <div class="bento-card__bottom">
+                        <span class="bento-card__tag">Daily commuters</span>
+                        <p>Built for serious commuting —<br>with the torque to prove it.</p>
+                        <a href="#" class="bento-card__link" aria-label="Explore Klimbr">
+                            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/arrow.svg'); ?>"
+                                alt="">
+                        </a>
+                    </div>
+                </article>
+
+                <!-- UrbanX -->
+                <article class="bento-card">
+                    <img class="bento-card__image"
+                        src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/urbnx-card.png'); ?>"
+                        alt="Motovolt UrbanX electric motorcycle">
+
+                    <div class="bento-card__top">
+                        <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/bento-urbnx-headline.png'); ?>"
+                            alt="UrbanX">
+                    </div>
+
+                    <div class="bento-card__bottom">
+                        <span class="bento-card__tag">Built for all ages</span>
+                        <p>The UrbnX is urban mobility done right<br>without a license.</p>
+                        <a href="#" class="bento-card__link" aria-label="Explore UrbanX">
+                            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/arrow.svg'); ?>"
+                                alt="">
+                        </a>
+                    </div>
+                </article>
+
+                <!-- M7 -->
+                <article class="bento-card">
+                    <img class="bento-card__image"
+                        src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/m7-card.png'); ?>"
+                        alt="Motovolt M7 electric scooter">
+
+                    <div class="bento-card__top bento-card__top--dark">
+                        <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/bento-m7-headline.png'); ?>"
+                            alt="M7">
+                    </div>
+
+                    <div class="bento-card__bottom">
+                        <span class="bento-card__tag">Urban commuters</span>
+                        <p>Your everyday ride, engineered to outperform it. Low<br>total cost of ownership. High
+                            reliability.</p>
+                        <a href="#" class="bento-card__link" aria-label="Explore M7">
+                            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/arrow.svg'); ?>"
+                                alt="">
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Urbon -->
+                <article class="bento-card">
+                    <img class="bento-card__image"
+                        src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/urbon-card.jpg'); ?>"
+                        alt="Motovolt Urbon electric motorcycle">
+
+                    <div class="bento-card__top bento-card__top--dark">
+                        <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/bento-urbn-headline.png'); ?>"
+                            alt="Urbon">
+                    </div>
+
+                    <div class="bento-card__bottom">
+                        <span class="bento-card__tag">Daily commuters</span>
+                        <p>URBN is lightweight, easy to handle, and built to<br>make city commute a little less
+                            complicated.</p>
+                        <a href="#" class="bento-card__link" aria-label="Explore Urbon">
+                            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/arrow.svg'); ?>"
+                                alt="">
+                        </a>
+                    </div>
+                </article>
+
+            </div>
         </div>
     </section>
 </main>
