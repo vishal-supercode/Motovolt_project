@@ -511,7 +511,7 @@ body {
   text-decoration: none;
   font-family: var(--font-1);
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 500;
   white-space: nowrap;
   transition: opacity 0.2s ease;
 }
@@ -635,7 +635,7 @@ body {
   font-family: var(--font-1);
   color: var(--color-5);
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.2;
   text-transform: uppercase;
   text-align: center;
@@ -758,6 +758,100 @@ body {
   }
   .admin-bar .hero__content {
     min-height: calc(100vh - 46px);
+  }
+}
+.intro-section {
+  width: 100%;
+  background: #FCFCFC;
+  color: var(--color-2);
+  padding-block: var(--space-lg) var(--space-xl);
+}
+.intro-section__content {
+  text-align: center;
+}
+.intro-section__heading {
+  margin: 0;
+  font-family: var(--font-2);
+  font-size: 52px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--color-2);
+}
+.intro-section__muted {
+  color: var(--color-6);
+}
+.intro-section__description {
+  border: 2px solid red;
+  max-width: 740px;
+  margin: var(--space-sm) auto 0;
+  font-family: var(--font-3);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 140%;
+  color: var(--color-2);
+}
+.intro-section__stats {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 120px;
+  margin-top: var(--space-lg);
+}
+.intro-section__stat {
+  flex: 1;
+  max-width: 240px;
+  text-align: center;
+}
+.intro-section__stat-value {
+  font-family: var(--font-1);
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-2);
+}
+.intro-section__stat-label {
+  margin-top: var(--space-xs);
+  font-family: var(--font-3);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 140%;
+  color: var(--color-2);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .intro-section {
+    padding-block: var(--space-md);
+  }
+  .intro-section__stats {
+    gap: var(--space-md);
+  }
+}
+/* Mobile */
+@media (max-width: 768px) {
+  .intro-section {
+    padding-block: var(--space-md);
+  }
+  .intro-section__heading {
+    font-size: clamp(26px, 6vw, 36px);
+    line-height: 1.2;
+  }
+  .intro-section__heading br {
+    display: none;
+  }
+  .intro-section__description {
+    max-width: 560px;
+    margin-top: var(--space-sm);
+  }
+  .intro-section__stats {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+  }
+  .intro-section__stat {
+    flex: none;
+    width: 100%;
   }
 }
 body {

@@ -138,7 +138,18 @@ add_action( 'widgets_init', 'supercode_widgets_init' );
  * Enqueue scripts and styles.
  */
 function supercode_scripts() {
-	wp_enqueue_style('supercode-style', get_template_directory_uri() . '/dist/css/app.min.css', array(), _S_VERSION);
+	wp_enqueue_style(
+		'supercode-chakra-petch',
+		'https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap',
+		array(),
+		null
+	);
+	wp_enqueue_style(
+		'supercode-style',
+		get_template_directory_uri() . '/dist/css/app.min.css',
+		array( 'supercode-chakra-petch' ),
+		_S_VERSION
+	);
 	wp_enqueue_script('supercode-js', get_template_directory_uri() . '/dist/js/app.min.js', array(), _S_VERSION, true);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

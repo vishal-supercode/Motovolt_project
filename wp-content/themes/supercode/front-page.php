@@ -87,6 +87,53 @@ get_header('home');
             </div>
         </div>
     </section>
+
+    <!-- About / Introduction Section -->
+    <section class="intro-section">
+        <div class="container intro-section__content">
+            <h2 class="intro-section__heading">
+                <span>Beautiful</span>
+                <span class="intro-section__muted"> On The </span>
+                <span>Outside.</span>
+                <br>
+                <span>Uncompromising</span>
+                <span class="intro-section__muted"> On The </span>
+                <span>Inside.</span>
+            </h2>
+
+            <p class="intro-section__description">
+                Your Motovolt will turn heads at the signal. But the real beauty is inside the
+                <br/>
+                motor controller, the battery, the chassis.
+                <br/>
+                They decide how it rides, how long it lasts, and how wide the smile on your face
+                is when you zoom off as the signal turns green.
+            </p>
+
+            <div class="intro-section__stats">
+                <div class="intro-section__stat">
+                    <div class="intro-section__stat-value">200+</div>
+                    <div class="intro-section__stat-label">Charging stations worldwide</div>
+                </div>
+
+                <div class="intro-section__stat">
+                    <div class="intro-section__stat-value">35000+</div>
+                    <div class="intro-section__stat-label">Customers</div>
+                </div>
+
+                <div class="intro-section__stat">
+                    <div class="intro-section__stat-value">200+</div>
+                    <div class="intro-section__stat-label">Dealerships</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bento-section">
+        <div class="container bento-section__content">
+            
+        </div>
+    </section>
 </main>
 
 <?php
