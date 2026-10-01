@@ -1,0 +1,42 @@
+:root {
+  --color-1: #F15B25;
+  --color-2: #000000;
+  --color-3: #1F1F1F;
+  --color-4: #FFFFFF;
+  --color-5: #DBDBDB;
+  --color-6: #A9A9A9;
+  --font-1: "Chakra Petch", sans-serif;
+  --font-2: "Roobert TRIAL", sans-serif;
+  --font-3: "Aktiv Grotesk Ex", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+}
+
+.hero {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.hero__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
