@@ -150,8 +150,10 @@ get_header('home');
                     </div>
 
                     <div class="bento-card__bottom">
-                        <span class="bento-card__tag">Daily commuters</span>
-                        <p>Built for serious commuting —<br>with the torque to prove it.</p>
+                        <div class="bento-card__text">
+                            <span class="bento-card__tag">Daily commuters</span>
+                            <p>Built for serious commuting —<br>with the torque to prove it.</p>
+                        </div>
                         <a href="#" class="bento-card__link" aria-label="Explore Klimbr">
                             <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/arrow.svg'); ?>"
                                 alt="">
@@ -171,8 +173,10 @@ get_header('home');
                     </div>
 
                     <div class="bento-card__bottom">
-                        <span class="bento-card__tag">Built for all ages</span>
-                        <p>The UrbnX is urban mobility done right<br>without a license.</p>
+                        <div class="bento-card__text">
+                            <span class="bento-card__tag">Built for all ages</span>
+                            <p>The UrbnX is urban mobility done right<br>without a license.</p>
+                        </div>
                         <a href="#" class="bento-card__link" aria-label="Explore UrbanX">
                             <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/arrow.svg'); ?>"
                                 alt="">
@@ -192,9 +196,11 @@ get_header('home');
                     </div>
 
                     <div class="bento-card__bottom">
-                        <span class="bento-card__tag">Urban commuters</span>
-                        <p>Your everyday ride, engineered to outperform it. Low<br>total cost of ownership. High
-                            reliability.</p>
+                        <div class="bento-card__text">
+                            <span class="bento-card__tag">Urban commuters</span>
+                            <p>Your everyday ride, engineered to outperform it. Low<br>total cost of ownership. High
+                                reliability.</p>
+                        </div>
                         <a href="#" class="bento-card__link" aria-label="Explore M7">
                             <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/arrow.svg'); ?>"
                                 alt="">
@@ -214,10 +220,12 @@ get_header('home');
                     </div>
 
                     <div class="bento-card__bottom">
-                        <span class="bento-card__tag">Daily commuters</span>
-                        <p>URBN is lightweight, easy to handle, and built to<br>make city commute a little less
-                            complicated.</p>
-                        <a href="#" class="bento-card__link" aria-label="Explore Urbon">
+                        <div class="bento-card__text">
+                            <span class="bento-card__tag">Daily commuters</span>
+                            <p>Built for serious commuting —<br>with the torque to prove it.</p>
+                        </div>
+
+                        <a href="#" class="bento-card__link" aria-label="Explore Klimbr">
                             <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/arrow.svg'); ?>"
                                 alt="">
                         </a>
