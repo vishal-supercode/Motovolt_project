@@ -128,12 +128,11 @@
   color: #111;
   font: 400 clamp(0.625rem, 2.05cqw, 0.9375rem)/1.22 var(--font-3);
 }
+
 .support-panel__visual-art {
   display: block;
-  width: min(480%, 22rem);
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  margin: 2% auto 0;
   object-fit: contain;
 }
 
@@ -197,16 +196,7 @@
 .support-service__thumb {
   z-index: 1;
 }
-.support-service__thumb::after {
-  content: "";
-  position: absolute;
-  inset: -1px 0;
-  background: inherit;
-  border-radius: inherit;
-}
-.support-panel__feature {
-  position: relative;
-}
+
 .support-panel__feature.has-scene > :not(.support-panel__scene) {
   visibility: hidden;
 }
