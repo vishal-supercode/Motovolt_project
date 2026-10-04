@@ -1,0 +1,182 @@
+/* =========================
+   Experience / Inside Story
+========================= */
+.experience-section {
+  position: relative;
+  overflow: hidden;
+  padding: 30px 0 74px;
+  background: var(--color-4);
+}
+.experience-section__content,
+.experience-section__detail {
+  position: relative;
+  z-index: 2;
+}
+.experience-section__heading {
+  margin: 0 0 42px;
+  font: 500 52px/1.3 var(--font-2);
+  color: var(--color-2);
+}
+.experience-section__heading span {
+  color: var(--color-1);
+}
+.experience-section__detail {
+  margin-top: 42px;
+}
+.experience-section__description {
+  max-width: 698px;
+  margin: 0 0 42px;
+  font: 400 18px/1.4 var(--font-3);
+  color: var(--color-2);
+}
+.experience-section__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  min-height: 50px;
+  padding: 0 34px;
+  border-radius: 6px;
+  background: var(--color-2);
+  color: var(--color-4);
+  font: 500 22px/1 var(--font-1);
+  text-decoration: none;
+}
+.experience-section__cta span {
+  font-size: 28px;
+}
+.experience-tabs {
+  display: flex;
+  width: fit-content;
+}
+.experience-tabs__tab {
+  min-width: 283px;
+  min-height: 63px;
+  padding: 0 24px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: #6e6e6e;
+  font: 400 18px/1.4 var(--font-2);
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+.experience-tabs__tab.is-active {
+  border: 1px solid #8b8181;
+  color: var(--color-2);
+}
+.experience-slider {
+  width: 100%;
+  overflow: hidden;
+  padding: 36px 0 0;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000 7%,
+    #000 93%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000 7%,
+    #000 93%,
+    transparent 100%
+  );
+}
+.experience-slider__track {
+  display: flex;
+  gap: 22px;
+  width: max-content;
+  transform: translateX(var(--experience-offset, 0px));
+  transition: transform 0.55s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.experience-card {
+  position: relative;
+  width: min(646px, 42.76vw);
+  height: 364px;
+  overflow: hidden;
+  flex: 0 0 min(646px, 42.76vw);
+  border-radius: 19px;
+  background: #d9d9d9;
+  color: var(--color-4);
+  transform: scale(0.94);
+  transition:
+    transform 0.55s ease,
+    box-shadow 0.55s ease;
+}
+.experience-card.is-active {
+  transform: scale(1);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.16);
+}
+.experience-card__media {
+  position: absolute;
+  inset: 0;
+  background: center/cover no-repeat;
+  filter: saturate(0.9);
+}
+.experience-card__media--controller {
+  background-image: url("../assets/images/klimbr-card.png");
+  background-position: center 62%;
+}
+.experience-card__media--battery {
+  background-image: url("../assets/images/urbnx-card.png");
+  background-position: center 55%;
+}
+.experience-card__media--design {
+  background-image: url("../assets/images/m7-card.png");
+  background-position: center 42%;
+}
+.experience-card__shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.04) 25%,
+    rgba(0, 0, 0, 0.72) 100%
+  );
+}
+.experience-card__eyebrow {
+  position: absolute;
+  left: 32px;
+  top: 28px;
+  font: 500 14px/1 var(--font-1);
+  opacity: 0.8;
+}
+.experience-card h3 {
+  position: absolute;
+  left: 32px;
+  right: 32px;
+  bottom: 28px;
+  margin: 0;
+  font: 500 28px/1.2 var(--font-2);
+}
+@media (max-width: 768px) {
+  .experience-section {
+    padding: 42px 0 56px;
+  }
+  .experience-section__heading {
+    font-size: clamp(32px, 8vw, 46px);
+    margin-bottom: 24px;
+  }
+  .experience-tabs {
+    width: 100%;
+    overflow-x: auto;
+  }
+  .experience-tabs__tab {
+    min-width: 220px;
+    font-size: 15px;
+  }
+  .experience-slider {
+    padding-top: 24px;
+  }
+  .experience-card {
+    width: 78vw;
+    flex-basis: 78vw;
+    height: 310px;
+  }
+  .experience-section__description {
+    font-size: 16px;
+  }
+}

@@ -279,9 +279,11 @@ get_header('home');
     <!-- Support -->
     <section class="support-section" aria-labelledby="support-title">
         <div class="container support-section__content">
-            <h2 id="support-title" class="support-section__heading"><span>Support</span> That Keeps You Moving</h2>
-            <p class="support-section__intro">Access quick assistance, expert guidance, and dependable after-sales
-                support throughout your ownership journey.</p>
+            <div class="support-section__header">
+                <h2 id="support-title" class="support-section__heading"><span>Support</span> That Keeps You Moving</h2>
+                <p class="support-section__intro">Access quick assistance, expert guidance, and dependable after-sales
+                    support throughout your ownership journey.</p>
+            </div>
 
             <div class="support-panel" data-support-panel>
                 <div class="support-panel__services" role="tablist" aria-label="Support services">
@@ -307,6 +309,19 @@ get_header('home');
                     </button>
                 </div>
                 <div class="support-panel__feature" data-support-feature>
+                    <div class="support-panel__scene support-panel__scene--video" data-support-scene="video" hidden>
+                        <img class="support-panel__phone" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/video-support.png'); ?>" alt="Motovolt technician assisting over a video call">
+                        <span class="support-panel__label">Issue Diagnosed</span><span class="support-panel__label">Fast Service Response</span><span class="support-panel__label">Service Connected</span><span class="support-panel__label">Battery Health</span><span class="support-panel__label">Live Assistance</span>
+                    </div>
+                    <div class="support-panel__scene support-panel__scene--parts" data-support-scene="parts" hidden>
+                        <img class="support-panel__delivery" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/parts-delivered.png'); ?>" alt="Motovolt genuine parts delivered to your door">
+                        <span class="support-panel__label">Genuine Parts</span><span class="support-panel__label">Doorstep Delivery</span><span class="support-panel__label">Fast Dispatch Support</span><span class="support-panel__label">Ready to Install Parts</span>
+                    </div>
+                    <div class="support-panel__scene support-panel__scene--doorstep" data-support-scene="doorstep" hidden>
+                        <img class="support-panel__technician" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/doorstop-service-guy.png'); ?>" alt="Motovolt service technician at your location">
+                        <img class="support-panel__scooter" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/doorstop-service-scooty.png'); ?>" alt="">
+                        <span class="support-panel__label">Certified Service Experts</span><span class="support-panel__label">Hassle Free Maintenance</span><span class="support-panel__label">Support At Your Location</span>
+                    </div>
                     <div class="support-panel__feature-copy">
                         <h3 data-support-title>Always Connected</h3>
                         <p data-support-description>Our support team is always ready to assist you through calls and

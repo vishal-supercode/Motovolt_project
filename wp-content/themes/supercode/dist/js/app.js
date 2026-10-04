@@ -34,6 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const services = [...panel.querySelectorAll('[data-support]')];
   const track = panel.querySelector('.support-service__track');
   const thumb = panel.querySelector('.support-service__thumb');
+  const feature = panel.querySelector('[data-support-feature]');
+  const scenes = [...panel.querySelectorAll('[data-support-scene]')];
   const title = panel.querySelector('[data-support-title]');
   const description = panel.querySelector('[data-support-description]');
   const content = {
@@ -44,8 +46,10 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   const moveThumb = (service) => {
     if (!track || !thumb) return;
-    const y = service.offsetTop - track.offsetTop + (service.offsetHeight - thumb.offsetHeight) / 2;
-    thumb.style.transform = `translateY(${y}px)`;
+    const index = services.indexOf(service);
+    const progress = services.length > 1 ? index / (services.length - 1) : 0;
+    thumb.style.top = `${progress * 100}%`;
+    thumb.style.transform = `translateY(-${progress * 100}%)`;
   };
   services.forEach((service) => service.addEventListener('click', () => {
     const selected = service.dataset.support;
@@ -55,6 +59,8 @@ document.addEventListener('DOMContentLoaded', () => {
       item.setAttribute('aria-selected', active ? 'true' : 'false');
     });
     moveThumb(service);
+    feature.classList.toggle('has-scene', selected !== 'network');
+    scenes.forEach((scene) => { scene.hidden = scene.dataset.supportScene !== selected; });
     [title.textContent, description.textContent] = content[selected];
   }));
   moveThumb(services.find((service) => service.classList.contains('is-active')) || services[0]);
