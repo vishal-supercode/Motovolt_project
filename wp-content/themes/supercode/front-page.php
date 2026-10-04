@@ -222,16 +222,115 @@ get_header('home');
                     <div class="bento-card__bottom">
                         <div class="bento-card__text">
                             <span class="bento-card__tag">Daily commuters</span>
-                            <p>Built for serious commuting —<br>with the torque to prove it.</p>
+                            <p>URBN is lightweight, easy to handle, and built to<br>make city commute a little less
+                                complicated.</p>
                         </div>
 
-                        <a href="#" class="bento-card__link" aria-label="Explore Klimbr">
+                        <a href="#" class="bento-card__link" aria-label="Explore Urbon">
                             <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/arrow.svg'); ?>"
                                 alt="">
                         </a>
                     </div>
                 </article>
 
+            </div>
+        </div>
+    </section>
+    <!-- Experience / Inside Story -->
+    <section class="experience-section" aria-labelledby="experience-title">
+        <div class="container experience-section__content">
+            <h2 id="experience-title" class="experience-section__heading">Experience Motovolt’s <span>Inside
+                    Story</span></h2>
+            <div class="experience-tabs" role="tablist" aria-label="Inside Story topics">
+                <button class="experience-tabs__tab is-active" type="button" role="tab" aria-selected="true"
+                    data-experience="controller">VESC Motor Controller</button>
+                <button class="experience-tabs__tab" type="button" role="tab" aria-selected="false"
+                    data-experience="battery">LFP Pouch-Cell Battery</button>
+                <button class="experience-tabs__tab" type="button" role="tab" aria-selected="false"
+                    data-experience="design">In-House Design &amp; Assembly</button>
+            </div>
+        </div>
+        <div class="experience-slider" data-experience-slider>
+            <div class="experience-slider__track">
+                <article class="experience-card is-active" data-experience-card="controller">
+                    <div class="experience-card__media experience-card__media--controller"></div>
+                    <div class="experience-card__shade"></div><span class="experience-card__eyebrow">01 / 03</span>
+                    <h3>VESC Motor Controller</h3>
+                </article>
+                <article class="experience-card" data-experience-card="battery">
+                    <div class="experience-card__media experience-card__media--battery"></div>
+                    <div class="experience-card__shade"></div><span class="experience-card__eyebrow">02 / 03</span>
+                    <h3>LFP Pouch-Cell Battery</h3>
+                </article>
+                <article class="experience-card" data-experience-card="design">
+                    <div class="experience-card__media experience-card__media--design"></div>
+                    <div class="experience-card__shade"></div><span class="experience-card__eyebrow">03 / 03</span>
+                    <h3>In-House Design &amp; Assembly</h3>
+                </article>
+            </div>
+        </div>
+        <div class="container experience-section__detail">
+            <p class="experience-section__description" data-experience-description>Most EV brands use generic
+                Chinese-made controllers. Ours is developed in-house - and extracts up to 1.92x the torque from the same
+                motor capacity. More pull. More efficiency. More control.</p>
+            <a class="experience-section__cta" href="#">Explore More <span aria-hidden="true">↗</span></a>
+        </div>
+    </section>
+    <!-- Support -->
+    <section class="support-section" aria-labelledby="support-title">
+        <div class="container support-section__content">
+            <h2 id="support-title" class="support-section__heading"><span>Support</span> That Keeps You Moving</h2>
+            <p class="support-section__intro">Access quick assistance, expert guidance, and dependable after-sales
+                support throughout your ownership journey.</p>
+
+            <div class="support-panel" data-support-panel>
+                <div class="support-panel__services" role="tablist" aria-label="Support services">
+                    <span class="support-service__track" aria-hidden="true"><span
+                            class="support-service__thumb"></span></span>
+                    <button class="support-service is-active" type="button" role="tab" aria-selected="true"
+                        data-support="network">
+                        <span class="support-service__copy"><strong>Pan India Service Network</strong><small>Always
+                                Connected. Always Supported.</small></span>
+                    </button>
+                    <button class="support-service" type="button" role="tab" aria-selected="false" data-support="video">
+                        <span class="support-service__copy"><strong>Video Support</strong><small>Real-Time Remote
+                                Assistance</small></span>
+                    </button>
+                    <button class="support-service" type="button" role="tab" aria-selected="false" data-support="parts">
+                        <span class="support-service__copy"><strong>Parts Delivered</strong><small>Service That Comes To
+                                You</small></span>
+                    </button>
+                    <button class="support-service" type="button" role="tab" aria-selected="false"
+                        data-support="doorstep">
+                        <span class="support-service__copy"><strong>Doorstep Service</strong><small>Service That Comes
+                                To You</small></span>
+                    </button>
+                </div>
+                <div class="support-panel__feature" data-support-feature>
+                    <div class="support-panel__feature-copy">
+                        <h3 data-support-title>Always Connected</h3>
+                        <p data-support-description>Our support team is always ready to assist you through calls and
+                            video support.</p>
+                    </div>
+                    <img class="support-panel__visual-art" src="" alt="">
+                    <div class="support-panel__wave" aria-hidden="true">
+                        <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                    </div>
+                    <div class="support-panel__actions" aria-label="Contact Motovolt support">
+                        <button class="support-panel__action" type="button" aria-label="Video call support"><svg
+                                viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="3.5" y="6.5" width="12" height="11" rx="2"></rect>
+                                <path d="m15.5 10 5-3v10l-5-3"></path>
+                            </svg></button>
+                        <button class="support-panel__action" type="button" aria-label="Call support"><svg
+                                viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M7 3.5h3l1.5 4-2 1.5a15 15 0 0 0 5.5 5.5l1.5-2 4 1.5v3c0 1.1-.9 2-2 2A15.5 15.5 0 0 1 5 5.5c0-1.1.9-2 2-2Z">
+                                </path>
+                                <path d="M14 4.5a5 5 0 0 1 5 5M14 7.5a2 2 0 0 1 2 2"></path>
+                            </svg></button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
