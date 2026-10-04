@@ -1421,11 +1421,6 @@ body {
      object-fit: contain;
 }
 
-/* Keep the empty source ready for artwork without reserving blank space. */
-.support-panel__visual-art[src=""] {
-  display: none;
-}
-
 .support-panel__wave {
   display: flex;
   align-items: center;
@@ -1437,34 +1432,6 @@ body {
   top: 51%;
   left: 33%;
   margin: 0;
-}
-
-.support-panel__wave i {
-  display: block;
-  width: 2%;
-  height: var(--wave-height, 30%);
-  border-radius: 8px;
-  background: linear-gradient(180deg, #d6c7ff, #ebd7ff 46%, #f8d6e8);
-}
-
-.support-panel__wave i:nth-child(4n+1) {
-  --wave-height: 10%;
-}
-
-.support-panel__wave i:nth-child(4n+2) {
-  --wave-height: 30%;
-}
-
-.support-panel__wave i:nth-child(4n+3) {
-  --wave-height: 60%;
-}
-
-.support-panel__wave i:nth-child(5n+1) {
-  --wave-height: 80%;
-}
-
-.support-panel__wave i:nth-child(7n+2) {
-  --wave-height: 42%;
 }
 
 .support-panel__actions {

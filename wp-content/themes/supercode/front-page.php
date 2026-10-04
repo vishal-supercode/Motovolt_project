@@ -344,7 +344,9 @@ get_header('home');
                             video support.</p>
                     </div>
                     <div class="support-panel__wave" aria-hidden="true">
-                        <img class="support-panel__visual-art" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/wave.png'); ?>" alt="Visual representation of Motovolt support services">
+                        <img class="support-panel__visual-art"
+                            src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/wave.png'); ?>"
+                            alt="Visual representation of Motovolt support services">
                     </div>
                     <div class="support-panel__actions" aria-label="Contact Motovolt support">
                         <button class="support-panel__action" type="button" aria-label="Video call support"><svg
