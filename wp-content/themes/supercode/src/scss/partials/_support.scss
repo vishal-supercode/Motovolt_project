@@ -6,7 +6,7 @@
 }
 .support-section__content {
   /* Keep the shared container, with a larger gutter for this section only. */
-  padding-inline: clamp(1.5rem, 6vw, 6rem);
+  padding-inline: clamp(2rem, 7.5vw, 8rem);
   container-type: inline-size;
 }
 .support-section__header {
@@ -22,19 +22,22 @@
   color: #fff;
   font: 500 clamp(2rem, 4cqw, 3.25rem)/1.3 var(--font-2);
 }
-.support-section__heading span { color: var(--color-1); }
+.support-section__heading span {
+  color: var(--color-1);
+}
 .support-section__intro {
-  width: 100%;
+  width: 75%;
   max-width: 36em;
   justify-self: end;
-  margin: .65em 0 0;
+  margin: 0.65em 0 0;
   color: #dbdbdb;
   text-align: right;
-  font: 400 clamp(.875rem, 1.4cqw, 1.125rem)/1.4 var(--font-3);
+  font-stretch: 100%;
+  font: 400 clamp(0.875rem, 1.4cqw, 1.125rem)/1.4 var(--font-3);
 }
 .support-panel {
   display: grid;
-  grid-template-columns: minmax(0, .4223fr) minmax(0, .5777fr);
+  grid-template-columns: minmax(0, 0.4223fr) minmax(0, 0.5777fr);
   gap: 0;
   width: 100%;
 }
@@ -49,21 +52,31 @@
 .support-service {
   display: block;
   width: 100%;
-  padding: .2em 0;
+  padding: 0.2em 0;
   border: 0;
   background: transparent;
   color: #a9a9a9;
   text-align: left;
   cursor: pointer;
 }
-.support-service__copy { display: flex; flex-direction: column; gap: .35em; }
+.support-service__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35em;
+}
 .support-service__copy strong {
   font: 500 clamp(1rem, 2.05cqw, 1.6875rem)/1.33 var(--font-2);
-  transition: color .25s ease;
+  transition: color 0.25s ease;
 }
-.support-service__copy small { font: 500 clamp(.75rem, 1.15cqw, .9375rem)/1.35 var(--font-1); }
-.support-service.is-active .support-service__copy strong { color: var(--color-1); }
-.support-service.is-active .support-service__copy small { color: #fff; }
+.support-service__copy small {
+  font: 500 clamp(0.75rem, 1.15cqw, 0.9375rem)/1.35 var(--font-1);
+}
+.support-service.is-active .support-service__copy strong {
+  color: var(--color-1);
+}
+.support-service.is-active .support-service__copy small {
+  color: #fff;
+}
 .support-service__track {
   position: absolute;
   inset: 0 auto 0 0;
@@ -78,44 +91,55 @@
   height: 18.5%;
   border-radius: inherit;
   background: var(--color-1);
-  transition: top .42s cubic-bezier(.22,.61,.36,1), transform .42s cubic-bezier(.22,.61,.36,1);
+  transition:
+    top 0.42s cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 0.42s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 .support-panel__feature {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   min-width: 0;
+  width: 100%;
   aspect-ratio: 747 / 361;
   container-type: inline-size;
   padding: 0;
   overflow: hidden;
-  border-radius: clamp(.75rem, 1.5vw, 1.25rem);
+  border-radius: clamp(0.75rem, 1.5vw, 1.25rem);
   background: #fff;
   text-align: center;
 }
-.support-panel__feature-copy { position: absolute; inset: 13% 5% auto; }
+
+.support-panel__feature-copy {
+  position: absolute;
+  inset: 13% 5% auto;
+}
 .support-panel__feature h3 {
-  margin: 0 0 .4em;
-  background: linear-gradient(107deg,#0e0e0e 8%,#747474 92%);
+  margin: 0 0 0.4em;
+  background: linear-gradient(107deg, #0e0e0e 8%, #747474 92%);
   background-clip: text;
   color: transparent;
   font: 600 clamp(1rem, 6.7cqw, 3.125rem)/1.2 var(--font-2);
 }
 .support-panel__feature p {
-  max-width: 27em;
+  max-width: 20em;
   margin: 0 auto;
   color: #111;
-  font: 400 clamp(.625rem, 2.05cqw, .9375rem)/1.22 var(--font-3);
+  font: 400 clamp(0.625rem, 2.05cqw, 0.9375rem)/1.22 var(--font-3);
 }
 .support-panel__visual-art {
   display: block;
-  width: 48%;
+  width: min(480%, 22rem);
+  max-width: 100%;
   height: auto;
   margin: 2% auto 0;
   object-fit: contain;
 }
 /* Keep the empty source ready for artwork without reserving blank space. */
-.support-panel__visual-art[src=""] { display: none; }
+.support-panel__visual-art[src=""] {
+  display: none;
+}
 .support-panel__wave {
   display: flex;
   align-items: center;
@@ -123,7 +147,10 @@
   gap: 1.6%;
   width: 34%;
   height: 17%;
-  position: absolute; top: 51%; left: 33%; margin: 0;
+  position: absolute;
+  top: 51%;
+  left: 33%;
+  margin: 0;
 }
 .support-panel__wave i {
   display: block;
@@ -151,7 +178,10 @@
   display: flex;
   justify-content: center;
   gap: 5%;
-  position: absolute; bottom: 9%; width: 28%; height: 14%;
+  position: absolute;
+  bottom: 9%;
+  width: 28%;
+  height: 14%;
 }
 .support-panel__action {
   display: grid;
@@ -179,12 +209,18 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .support-service__thumb { transition: none; }
+  .support-service__thumb {
+    transition: none;
+  }
 }
 
 /* Service artwork fills the same banner without changing the selector height. */
-.support-service__track { overflow: hidden; }
-.support-service__thumb { z-index: 1; }
+.support-service__track {
+  overflow: hidden;
+}
+.support-service__thumb {
+  z-index: 1;
+}
 .support-service__thumb::after {
   content: "";
   position: absolute;
@@ -192,50 +228,139 @@
   background: inherit;
   border-radius: inherit;
 }
-.support-panel__feature { position: relative; }
-.support-panel__feature.has-scene > :not(.support-panel__scene) { visibility: hidden; }
+.support-panel__feature {
+  position: relative;
+}
+.support-panel__feature.has-scene > :not(.support-panel__scene) {
+  visibility: hidden;
+}
 .support-panel__scene {
   position: absolute;
   inset: 0;
   overflow: hidden;
   background: #ededed;
 }
-.support-panel__scene[hidden] { display: none; }
-.support-panel__scene img { position: absolute; display: block; }
-.support-panel__phone { height: 95%; width: auto; left: 35%; bottom: 0; }
-.support-panel__delivery { height: 100%; width: 85.5%; right: 0; bottom: 0; object-fit: cover; }
-.support-panel__scene--parts { background: #dedede; }
-.support-panel__technician { height: 100%; width: 100%; inset: 0; object-fit: cover; }
-.support-panel__scene--doorstep { background: #e4e4e4; }
-.support-panel__scooter { width: 48%; height: auto; right: 0; bottom: 0; }
+.support-panel__scene[hidden] {
+  display: none;
+}
+.support-panel__scene img {
+  position: absolute;
+  display: block;
+}
+.support-panel__phone {
+  height: 95%;
+  width: auto;
+  left: 35%;
+  bottom: 0;
+}
+.support-panel__delivery {
+  height: 100%;
+  width: 85.5%;
+  right: 0;
+  bottom: 0;
+  object-fit: cover;
+}
+.support-panel__scene--parts {
+  background: #dedede;
+}
+.support-panel__technician {
+  height: 100%;
+  width: 100%;
+  inset: 0;
+  object-fit: cover;
+}
+.support-panel__scene--doorstep {
+  background: #e4e4e4;
+}
+.support-panel__scooter {
+  width: 48%;
+  height: auto;
+  right: 0;
+  bottom: 0;
+}
 .support-panel__label {
   position: absolute;
   z-index: 2;
-  padding: .4em 1em;
+  padding: 0.4em 1em;
   border-radius: 6px;
   background: #fff;
   color: #111;
   white-space: nowrap;
-  font: 400 clamp(.4375rem, 1.87cqw, .875rem)/1.15 var(--font-3);
+  font: 400 clamp(0.4375rem, 1.87cqw, 0.875rem)/1.15 var(--font-3);
 }
-.support-panel__scene--video .support-panel__label:nth-of-type(1) { left: 11.5%; top: 25.5%; }
-.support-panel__scene--video .support-panel__label:nth-of-type(2) { left: 7%; top: 55.5%; }
-.support-panel__scene--video .support-panel__label:nth-of-type(3) { right: 7%; top: 13.5%; }
-.support-panel__scene--video .support-panel__label:nth-of-type(4) { right: 12%; top: 42%; }
-.support-panel__scene--video .support-panel__label:nth-of-type(5) { right: 7%; top: 68.5%; }
-.support-panel__scene--parts .support-panel__label:nth-of-type(1) { left: 22.5%; top: 12%; }
-.support-panel__scene--parts .support-panel__label:nth-of-type(2) { left: 7.5%; top: 33.5%; }
-.support-panel__scene--parts .support-panel__label:nth-of-type(3) { left: 13%; top: 56.5%; }
-.support-panel__scene--parts .support-panel__label:nth-of-type(4) { left: 12.5%; top: 79%; }
-.support-panel__scene--doorstep .support-panel__label:nth-of-type(1) { left: 11%; top: 18.5%; }
-.support-panel__scene--doorstep .support-panel__label:nth-of-type(2) { left: 7%; top: 42.5%; }
-.support-panel__scene--doorstep .support-panel__label:nth-of-type(3) { left: 6%; top: 69.5%; }
+.support-panel__scene--video .support-panel__label:nth-of-type(1) {
+  left: 11.5%;
+  top: 25.5%;
+}
+.support-panel__scene--video .support-panel__label:nth-of-type(2) {
+  left: 7%;
+  top: 55.5%;
+}
+.support-panel__scene--video .support-panel__label:nth-of-type(3) {
+  right: 7%;
+  top: 13.5%;
+}
+.support-panel__scene--video .support-panel__label:nth-of-type(4) {
+  right: 12%;
+  top: 42%;
+}
+.support-panel__scene--video .support-panel__label:nth-of-type(5) {
+  right: 7%;
+  top: 68.5%;
+}
+.support-panel__scene--parts .support-panel__label:nth-of-type(1) {
+  left: 22.5%;
+  top: 12%;
+}
+.support-panel__scene--parts .support-panel__label:nth-of-type(2) {
+  left: 7.5%;
+  top: 33.5%;
+}
+.support-panel__scene--parts .support-panel__label:nth-of-type(3) {
+  left: 13%;
+  top: 56.5%;
+}
+.support-panel__scene--parts .support-panel__label:nth-of-type(4) {
+  left: 12.5%;
+  top: 79%;
+}
+.support-panel__scene--doorstep .support-panel__label:nth-of-type(1) {
+  left: 11%;
+  top: 18.5%;
+}
+.support-panel__scene--doorstep .support-panel__label:nth-of-type(2) {
+  left: 7%;
+  top: 42.5%;
+}
+.support-panel__scene--doorstep .support-panel__label:nth-of-type(3) {
+  left: 6%;
+  top: 69.5%;
+}
 @media (max-width: 60rem) {
-  .support-section__header { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
-  .support-section__intro { justify-self: start; text-align: left; margin: 0; }
-  .support-panel { grid-template-columns: minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 2.5rem); }
-  .support-panel__services { gap: 1.5rem; padding-inline: 1.5rem 0; }
-  .support-service__copy strong { font-size: clamp(1.125rem, 3cqw, 1.5rem); }
-  .support-service__copy small { font-size: clamp(.75rem, 2cqw, .9375rem); }
-  .support-panel__feature { width: 100%; }
+  .support-section__header {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
+  .support-section__intro {
+    justify-self: start;
+    text-align: left;
+    margin: 0;
+  }
+  .support-panel {
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(1.5rem, 4vw, 2.5rem);
+  }
+  .support-panel__services {
+    gap: 1.5rem;
+    padding-inline: 1.5rem 0;
+  }
+  .support-service__copy strong {
+    font-size: clamp(1.125rem, 3cqw, 1.5rem);
+  }
+  .support-service__copy small {
+    font-size: clamp(0.75rem, 2cqw, 0.9375rem);
+  }
+  .support-panel__feature {
+    width: 100%;
+  }
 }
