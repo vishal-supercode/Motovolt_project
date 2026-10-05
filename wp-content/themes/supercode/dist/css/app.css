@@ -990,6 +990,9 @@ body {
      object-position: center 42%;
   transform: scale(1.02);
 }
+.bento-card:hover .bento-card__image {
+  transform: scale(1.04);
+}
 .bento-card__bottom {
   position: absolute;
   left: 0;
