@@ -77,14 +77,15 @@ get_header('home');
 
                     <!-- Slider Indicators -->
                     <div class="hero-slider" data-hero-slider role="group" aria-label="Hero slides">
-                        <?php for ($slide = 0; $slide < 5; $slide++) : ?>
+                        <?php for ($slide = 0; $slide < 5; $slide++): ?>
                             <button class="hero-slider__line<?php echo $slide === 0 ? ' is-active' : ''; ?>" type="button"
                                 data-hero-slide="<?php echo esc_attr($slide); ?>"
                                 data-hero-image="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-section-image-1.png'); ?>"
                                 aria-label="Show slide <?php echo esc_attr($slide + 1); ?>"
                                 aria-pressed="<?php echo $slide === 0 ? 'true' : 'false'; ?>"></button>
                         <?php endfor; ?>
-                        <button class="hero-slider__toggle" type="button" data-hero-toggle aria-pressed="false">Pause</button>
+                        <button class="hero-slider__toggle" type="button" data-hero-toggle
+                            aria-pressed="false">Pause</button>
                     </div>
                 </div>
             </div>
@@ -257,17 +258,23 @@ get_header('home');
         <div class="experience-slider" data-experience-slider>
             <div class="experience-slider__track">
                 <article class="experience-card is-active" data-experience-card="controller">
-                    <img class="experience-card__media" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-section-image-1.png'); ?>" alt="" aria-hidden="true">
+                    <img class="experience-card__media"
+                        src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-section-image-1.png'); ?>"
+                        alt="" aria-hidden="true">
                     <div class="experience-card__shade"></div><span class="experience-card__eyebrow">01 / 03</span>
                     <h3>VESC Motor Controller</h3>
                 </article>
                 <article class="experience-card" data-experience-card="battery">
-                    <img class="experience-card__media" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-section-image-1.png'); ?>" alt="" aria-hidden="true">
+                    <img class="experience-card__media"
+                        src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-section-image-1.png'); ?>"
+                        alt="" aria-hidden="true">
                     <div class="experience-card__shade"></div><span class="experience-card__eyebrow">02 / 03</span>
                     <h3>LFP Pouch-Cell Battery</h3>
                 </article>
                 <article class="experience-card" data-experience-card="design">
-                    <img class="experience-card__media" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-section-image-1.png'); ?>" alt="" aria-hidden="true">
+                    <img class="experience-card__media"
+                        src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-section-image-1.png'); ?>"
+                        alt="" aria-hidden="true">
                     <div class="experience-card__shade"></div><span class="experience-card__eyebrow">03 / 03</span>
                     <h3>In-House Design &amp; Assembly</h3>
                 </article>
@@ -379,8 +386,11 @@ get_header('home');
             </div>
             <div class="store-section__copy">
                 <h2 id="store-title">Find your <span>Motovolt Store</span></h2>
-                <p>Visit a Motovolt Experience Centre to explore our latest electric<br>cycles and smart mobility solutions.</p>
-                <a class="store-section__cta" href="tel:+910000000000"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/store-location-icon.png'); ?>" alt="phone">Request a call back</a>
+                <p>Visit a Motovolt Experience Centre to explore our latest electric<br>cycles and smart mobility
+                    solutions.</p>
+                <a class="store-section__cta" href="tel:+910000000000"><img
+                        src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/store-location-icon.png'); ?>"
+                        alt="phone">Request a call back</a>
                 <label class="store-section__select-label" for="store-city">Choose a city</label>
                 <div class="store-section__select-wrap">
                     <select class="store-section__select" id="store-city" name="store-city">
@@ -389,7 +399,9 @@ get_header('home');
                         <option value="mumbai">Mumbai</option>
                         <option value="delhi">Delhi</option>
                     </select>
-                    <img class="store-section__select-arrow" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/down-arrow.png'); ?>" alt="" aria-hidden="true">
+                    <img class="store-section__select-arrow"
+                        src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/down-arrow.png'); ?>"
+                        alt="" aria-hidden="true">
                 </div>
             </div>
         </div>

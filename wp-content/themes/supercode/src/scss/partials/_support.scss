@@ -5,7 +5,6 @@
   color: #fff;
 }
 .support-section__content {
-  /* Keep the shared container, with a larger gutter for this section only. */
   padding-inline: clamp(2rem, 7.5vw, 8rem);
   container-type: inline-size;
 }
@@ -189,7 +188,6 @@
   }
 }
 
-/* Service artwork fills the same banner without changing the selector height. */
 .support-service__track {
   overflow: hidden;
 }

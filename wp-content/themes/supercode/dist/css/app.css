@@ -446,10 +446,6 @@ body {
 .hero {
   position: relative;
   width: 100%;
-  /*
-   * Keep the hero slightly taller than the viewport.
-   * This pushes the stats below the initial viewport.
-   */
   height: calc(100vh + 110px);
   overflow: hidden;
   background-color: var(--color-2);
@@ -963,6 +959,12 @@ body {
 .bento-section__heading span {
   color: var(--color-1);
 }
+.bento-section {
+  /* Dark background while mouse is inside the section */
+}
+.bento-section:hover {
+  background: var(--color-2);
+}
 
 /* Grid */
 .bento-grid {
@@ -1340,7 +1342,6 @@ body {
 }
 
 .support-section__content {
-  /* Keep the shared container, with a larger gutter for this section only. */
   padding-inline: clamp(2rem, 7.5vw, 8rem);
   container-type: inline-size;
 }
@@ -1538,7 +1539,6 @@ body {
     transition: none;
   }
 }
-/* Service artwork fills the same banner without changing the selector height. */
 .support-service__track {
   overflow: hidden;
 }
