@@ -90,7 +90,7 @@ body {
    Container
 ========================= */
 .container {
-  width: 100%;
+  width: 90%;
   max-width: var(--container-max);
   margin-inline: auto;
   padding-inline: var(--container-padding);
@@ -716,11 +716,17 @@ body {
   }
 }
 .site-header--hero {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 4;
   width: 100%;
+  transition: transform 300ms ease;
+  will-change: transform;
+}
+
+.site-header--hero.is-hidden {
+  transform: translateY(-100%);
 }
 
 .hero-nav {
@@ -828,9 +834,21 @@ body {
   top: 32px;
 }
 
+.admin-bar .site-header--hero.is-hidden {
+  transform: translateY(calc(-100% - 32px));
+}
+
 @media screen and (max-width: 782px) {
   .admin-bar .site-header--hero {
     top: 46px;
+  }
+  .admin-bar .site-header--hero.is-hidden {
+    transform: translateY(calc(-100% - 46px));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-header--hero {
+    transition-duration: 0.01ms;
   }
 }
 .intro-section {

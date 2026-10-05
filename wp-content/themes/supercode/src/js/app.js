@@ -39,6 +39,33 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
+  const header = document.querySelector('.site-header--hero');
+  if (!header) return;
+
+  let previousScrollY = window.scrollY;
+  let ticking = false;
+
+  const updateHeader = () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY <= 80 || currentScrollY < previousScrollY) {
+      header.classList.remove('is-hidden');
+    } else if (currentScrollY > previousScrollY) {
+      header.classList.add('is-hidden');
+    }
+
+    previousScrollY = currentScrollY;
+    ticking = false;
+  };
+
+  window.addEventListener('scroll', () => {
+    if (ticking) return;
+    window.requestAnimationFrame(updateHeader);
+    ticking = true;
+  }, { passive: true });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
   const section = document.querySelector('[data-experience-slider]');
   if (!section) return;
   const track = section.querySelector('.experience-slider__track');
