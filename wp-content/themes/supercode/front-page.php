@@ -76,12 +76,15 @@ get_header('home');
                     </div>
 
                     <!-- Slider Indicators -->
-                    <div class="hero-slider" aria-label="Hero slides">
-                        <span class="hero-slider__line hero-slider__line--active"></span>
-                        <span class="hero-slider__line"></span>
-                        <span class="hero-slider__line"></span>
-                        <span class="hero-slider__line"></span>
-                        <span class="hero-slider__line"></span>
+                    <div class="hero-slider" data-hero-slider role="group" aria-label="Hero slides">
+                        <?php for ($slide = 0; $slide < 5; $slide++) : ?>
+                            <button class="hero-slider__line<?php echo $slide === 0 ? ' is-active' : ''; ?>" type="button"
+                                data-hero-slide="<?php echo esc_attr($slide); ?>"
+                                data-hero-image="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-section-image-1.png'); ?>"
+                                aria-label="Show slide <?php echo esc_attr($slide + 1); ?>"
+                                aria-pressed="<?php echo $slide === 0 ? 'true' : 'false'; ?>"></button>
+                        <?php endfor; ?>
+                        <button class="hero-slider__toggle" type="button" data-hero-toggle aria-pressed="false">Pause</button>
                     </div>
                 </div>
             </div>

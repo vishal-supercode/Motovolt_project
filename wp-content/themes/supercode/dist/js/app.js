@@ -1,6 +1,45 @@
 console.log('Supercode theme loaded');
 
 document.addEventListener('DOMContentLoaded', () => {
+  const slider = document.querySelector('[data-hero-slider]');
+  const background = document.querySelector('.hero__background');
+  if (!slider || !background) return;
+
+  const slides = [...slider.querySelectorAll('[data-hero-slide]')];
+  const toggle = slider.querySelector('[data-hero-toggle]');
+  if (!slides.length || !toggle) return;
+
+  let activeIndex = slides.findIndex((slide) => slide.classList.contains('is-active'));
+  let paused = false;
+
+  const showSlide = (index) => {
+    activeIndex = (index + slides.length) % slides.length;
+    slides.forEach((slide, slideIndex) => {
+      const active = slideIndex === activeIndex;
+      slide.classList.toggle('is-active', active);
+      slide.setAttribute('aria-pressed', active ? 'true' : 'false');
+    });
+    background.src = slides[activeIndex].dataset.heroImage;
+    background.classList.remove('is-transitioning');
+    void background.offsetWidth;
+    background.classList.add('is-transitioning');
+  };
+
+  slides.forEach((slide, index) => slide.addEventListener('click', () => showSlide(index)));
+  toggle.addEventListener('click', () => {
+    paused = !paused;
+    toggle.textContent = paused ? 'Resume' : 'Pause';
+    toggle.setAttribute('aria-pressed', paused ? 'true' : 'false');
+    slider.classList.toggle('is-paused', paused);
+  });
+
+  showSlide(Math.max(activeIndex, 0));
+  window.setInterval(() => {
+    if (!paused) showSlide(activeIndex + 1);
+  }, 5000);
+});
+
+document.addEventListener('DOMContentLoaded', () => {
   const section = document.querySelector('[data-experience-slider]');
   if (!section) return;
   const track = section.querySelector('.experience-slider__track');
