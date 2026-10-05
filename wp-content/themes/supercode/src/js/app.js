@@ -17,10 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (index < 0) return;
     tabs.forEach((tab) => { const active = tab.dataset.experience === name; tab.classList.toggle('is-active', active); tab.setAttribute('aria-selected', active ? 'true' : 'false'); });
     cards.forEach((card, i) => card.classList.toggle('is-active', i === index));
-    const cardWidth = cards[0].getBoundingClientRect().width;
-    const gap = 22;
-    const centerOffset = (window.innerWidth / 2) - (cardWidth / 2) - (index * (cardWidth + gap));
-    track.style.setProperty('--experience-offset', `${centerOffset}px`);
+    const leftInset = parseFloat(getComputedStyle(section).paddingLeft) || 0;
+    const card = cards[index];
+    const offset = index === 0
+      ? 0
+      : (section.clientWidth - card.offsetWidth) / 2 - leftInset - card.offsetLeft;
+    track.style.setProperty('--experience-offset', `${offset}px`);
     if (description) description.textContent = copy[name];
   };
   tabs.forEach((tab) => tab.addEventListener('click', () => setActive(tab.dataset.experience)));

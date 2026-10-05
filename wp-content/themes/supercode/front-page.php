@@ -250,20 +250,21 @@ get_header('home');
                     data-experience="design">In-House Design &amp; Assembly</button>
             </div>
         </div>
+
         <div class="experience-slider" data-experience-slider>
             <div class="experience-slider__track">
                 <article class="experience-card is-active" data-experience-card="controller">
-                    <div class="experience-card__media experience-card__media--controller"></div>
+                    <img class="experience-card__media" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-section-image-1.png'); ?>" alt="" aria-hidden="true">
                     <div class="experience-card__shade"></div><span class="experience-card__eyebrow">01 / 03</span>
                     <h3>VESC Motor Controller</h3>
                 </article>
                 <article class="experience-card" data-experience-card="battery">
-                    <div class="experience-card__media experience-card__media--battery"></div>
+                    <img class="experience-card__media" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-section-image-1.png'); ?>" alt="" aria-hidden="true">
                     <div class="experience-card__shade"></div><span class="experience-card__eyebrow">02 / 03</span>
                     <h3>LFP Pouch-Cell Battery</h3>
                 </article>
                 <article class="experience-card" data-experience-card="design">
-                    <div class="experience-card__media experience-card__media--design"></div>
+                    <img class="experience-card__media" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-section-image-1.png'); ?>" alt="" aria-hidden="true">
                     <div class="experience-card__shade"></div><span class="experience-card__eyebrow">03 / 03</span>
                     <h3>In-House Design &amp; Assembly</h3>
                 </article>
@@ -378,12 +379,15 @@ get_header('home');
                 <p>Visit a Motovolt Experience Centre to explore our latest electric<br>cycles and smart mobility solutions.</p>
                 <a class="store-section__cta" href="tel:+910000000000"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/store-location-icon.png'); ?>" alt="phone">Request a call back</a>
                 <label class="store-section__select-label" for="store-city">Choose a city</label>
-                <select class="store-section__select" id="store-city" name="store-city">
-                    <option value="" selected>Select City</option>
-                    <option value="bengaluru">Bengaluru</option>
-                    <option value="mumbai">Mumbai</option>
-                    <option value="delhi">Delhi</option>
-                </select>
+                <div class="store-section__select-wrap">
+                    <select class="store-section__select" id="store-city" name="store-city">
+                        <option value="" selected>Select City</option>
+                        <option value="bengaluru">Bengaluru</option>
+                        <option value="mumbai">Mumbai</option>
+                        <option value="delhi">Delhi</option>
+                    </select>
+                    <img class="store-section__select-arrow" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/down-arrow.png'); ?>" alt="" aria-hidden="true">
+                </div>
             </div>
         </div>
     </section>
