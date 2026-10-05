@@ -1,0 +1,130 @@
+.site-header--hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  width: 100%;
+}
+
+.hero-nav {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 70px);
+  margin: 0 auto;
+  margin-top: 10px;
+  gap: 14px;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    width: 236px;
+    height: 62px;
+    padding: 0 16px;
+    border-radius: 8px;
+    background: var(--color-2);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+
+    img {
+      display: block;
+      width: auto;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    height: 62px;
+    padding: 0 16px 0 38px;
+    border-radius: 8px;
+    background: var(--color-2);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 48px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    a {
+      color: var(--color-6);
+      text-decoration: none;
+      font-family: var(--font-1);
+      font-size: 14px;
+      font-weight: 500;
+      white-space: nowrap;
+      transition: opacity 0.2s ease;
+    }
+  }
+
+  &__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 127px;
+    height: 37px;
+    flex-shrink: 0;
+    gap: 10px;
+    border-radius: 4px;
+    background: var(--color-1);
+    color: var(--color-4) !important;
+    text-decoration: none;
+    font-family: var(--font-1);
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-nav {
+    width: calc(100% - 40px);
+
+    &__menu {
+      gap: 18px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-nav {
+    width: calc(100% - 24px);
+    min-height: 50px;
+
+    &__logo {
+      width: 100px;
+      height: 34px;
+    }
+
+    &__menu {
+      display: none;
+    }
+
+    &__cta {
+      margin-left: auto;
+      min-width: 90px;
+      height: 32px;
+      padding-inline: 12px;
+      font-size: 10px;
+    }
+  }
+}
+
+.admin-bar .site-header--hero {
+  top: 32px;
+}
+
+@media screen and (max-width: 782px) {
+  .admin-bar .site-header--hero {
+    top: 46px;
+  }
+}

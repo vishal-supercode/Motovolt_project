@@ -1,32 +1,36 @@
 <?php
 /**
- * The template for displaying the footer
- *
- * Contains the closing of the #content div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ * Homepage footer content.
  *
  * @package Supercode
  */
-
 ?>
+<footer class="site-footer" aria-label="Site footer">
+    <div class="container site-footer__inner">
+        <div class="site-footer__top">
+            <a class="site-footer__brand" href="<?php echo esc_url(home_url('/')); ?>" aria-label="Motovolt home">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/Motovolt-footer.png'); ?>" alt="Motovolt">
+            </a>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'supercode' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'supercode' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'supercode' ), 'supercode', '<a href="http://underscores.me/">Supercode</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+            <nav class="site-footer__socials" aria-label="Social media">
+                <a href="#" aria-label="Instagram"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/InstagramLogo.png'); ?>" alt="Instagram"></a>
+                <a href="#" aria-label="Facebook"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/FacebookLogo.png'); ?>" alt="Facebook"></a>
+                <a href="#" aria-label="YouTube"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/YouTubeLogo.png'); ?>" alt="YouTube"></a>
+                <a href="#" aria-label="LinkedIn"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/LinkedInLogo.png'); ?>" alt="LinkedIn"></a>
+                <a href="#" aria-label="X"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/TwitterLogo.png'); ?>" alt="X"></a>
+            </nav>
+        </div>
+
+        <div class="site-footer__bottom">
+            <p>&copy;Motovolt Mobility Pvt. Ltd.</p>
+            <nav aria-label="Legal links">
+                <a href="#">Return &amp; Refund Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy Policy</a>
+            </nav>
+        </div>
+    </div>
+</footer>
 
 <?php wp_footer(); ?>
 

@@ -65,101 +65,6 @@
 
 
 /* =========================
-   Hero Navigation
-========================= */
-
-.hero-nav {
-  display: flex;
-  align-items: center;
-  width: calc(100% - 70px);
-  margin: 30px auto 0;
-  gap: 14px;
-
-  /* =========================
-     Logo Block
-  ========================= */
-
-  &__logo {
-    width: 236px;
-    height: 62px;
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
-    padding: 0 16px;
-    background: var(--color-2);
-    border-radius: 8px;
-    backdrop-filter: blur(40px);
-    -webkit-backdrop-filter: blur(40px);
-
-    img {
-      display: block;
-      width: auto;
-      max-width: 100%;
-      max-height: 100%;
-    }
-  }
-
-  /* =========================
-     Menu Block
-  ========================= */
-
-  &__menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex: 1;
-    height: 62px;
-    padding: 0 16px 0 38px;
-    background: var(--color-2);
-    border-radius: 8px;
-    backdrop-filter: blur(40px);
-    -webkit-backdrop-filter: blur(40px);
-
-    ul {
-      display: flex;
-      align-items: center;
-      gap: 48px;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    a {
-      color: var(--color-6);
-      text-decoration: none;
-      font-family: var(--font-1);
-      font-size: 14px;
-      font-weight: 500;
-      white-space: nowrap;
-      transition: opacity 0.2s ease;
-    }
-  }
-
-
-  /* =========================
-     Book Now
-  ========================= */
-
-  &__cta {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 127px;
-    height: 37px;
-    flex-shrink: 0;
-    background: var(--color-1);
-    color: var(--color-4) !important;
-    border-radius: 4px;
-    text-decoration: none;
-    font-family: var(--font-1);
-    font-size: 13px;
-    font-weight: 500;
-    white-space: nowrap;
-    gap: 10px
-  }
-}
-
-/* =========================
    Hero Main Content
 ========================= */
 
@@ -327,14 +232,6 @@
 ========================= */
 
 @media (max-width: 1024px) {
-  .hero-nav {
-    width: calc(100% - 40px);
-
-    &__menu {
-      gap: 18px;
-    }
-  }
-
   .hero-tagline {
     margin-right: 0;
   }
@@ -358,29 +255,6 @@
 
     &__background {
       object-position: center;
-    }
-  }
-
-  .hero-nav {
-    width: calc(100% - 24px);
-    margin-top: 12px;
-    min-height: 50px;
-
-    &__logo {
-      width: 100px;
-      height: 34px;
-    }
-
-    &__menu {
-      display: none;
-    }
-
-    &__cta {
-      margin-left: auto;
-      min-width: 90px;
-      height: 32px;
-      padding-inline: 12px;
-      font-size: 10px;
     }
   }
 

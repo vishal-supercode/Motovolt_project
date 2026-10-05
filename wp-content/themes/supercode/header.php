@@ -17,8 +17,6 @@
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<!-- <link rel="preconnect" href="https://use.typekit.net" crossOrigin="anonymous" />
-	<link rel="preconnect" href="https://p.typekit.net" crossOrigin="anonymous" /> -->
 
 	<?php wp_head(); ?>
 </head>
@@ -28,22 +26,37 @@
 	<div id="page" class="site">
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'supercode'); ?></a>
 
-		<header id="masthead" class="site-header">
+		<header id="masthead" class="site-header<?php echo is_front_page() ? ' site-header--hero' : ''; ?>">
+			<?php if (is_front_page()): ?>
+				<nav class="hero-nav">
+					<a href="<?php echo esc_url(home_url('/')); ?>" class="hero-nav__logo"
+						aria-label="<?php bloginfo('name'); ?>">
+						<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/company-logo.png'); ?>"
+							alt="<?php bloginfo('name'); ?>">
+					</a>
+
+					<div class="hero-nav__menu">
+						<ul>
+							<li><a href="#">Smart Vehicles</a></li>
+							<li><a href="#">Accessories</a></li>
+							<li><a href="#">Store Locator</a></li>
+							<li><a href="#">Dealers Enquiry</a></li>
+							<li><a href="#">More</a></li>
+						</ul>
+
+						<a href="#" class="hero-nav__cta">Book Now <img
+								src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/arrow.svg'); ?>"
+								alt="" aria-hidden="true"></a>
+					</div>
+				</nav>
+			<?php else: ?>
 			<div class="site-branding">
 				<?php
 				the_custom_logo();
-				if (is_front_page() && is_home()):
-					?>
-					<img src="" />
-					<h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>"
-							rel="home"><?php bloginfo('name'); ?></a></h1>
-					<?php
-				else:
-					?>
-					<p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>"
-							rel="home"><?php bloginfo('name'); ?></a></p>
-					<?php
-				endif;
+				?>
+				<p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>"
+						rel="home"><?php bloginfo('name'); ?></a></p>
+				<?php
 				$supercode_description = get_bloginfo('description', 'display');
 				if ($supercode_description || is_customize_preview()):
 					?>
@@ -65,4 +78,5 @@
 				);
 				?>
 			</nav><!-- #site-navigation -->
+			<?php endif; ?>
 		</header><!-- #masthead -->

@@ -5,7 +5,7 @@
  * @package Supercode
  */
 
-get_header('home');
+get_header();
 ?>
 
 <main id="primary" class="site-main">
@@ -16,32 +16,6 @@ get_header('home');
             alt="Motovolt electric motorcycle">
 
         <div class="hero__content">
-            <!-- Hero Navigation -->
-            <nav class="hero-nav">
-                <!-- Logo Block -->
-                <a href="<?php echo esc_url(home_url('/')); ?>" class="hero-nav__logo"
-                    aria-label="<?php bloginfo('name'); ?>">
-                    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/company-logo.png'); ?>"
-                        alt="<?php bloginfo('name'); ?>">
-                </a>
-
-                <!-- Menu Block -->
-                <div class="hero-nav__menu">
-                    <ul>
-                        <li><a href="#">Smart Vehicles</a></li>
-                        <li><a href="#">Accessories</a></li>
-                        <li><a href="#">Store Locator</a></li>
-                        <li><a href="#">Dealers Enquiry</a></li>
-                        <li><a href="#">More</a></li>
-                    </ul>
-
-                    <a href="#" class="hero-nav__cta"> Book Now <img
-                            src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/arrow.svg'); ?>"
-                            alt="<?php bloginfo('name'); ?>"></a>
-                </div>
-
-            </nav>
-
             <!-- Hero Main Content -->
             <div class="hero-main">
                 <!-- Product Name -->
@@ -416,4 +390,4 @@ get_header('home');
 </main>
 
 <?php
-get_footer('home');
+get_footer();
