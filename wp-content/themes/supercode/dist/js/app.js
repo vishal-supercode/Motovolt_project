@@ -6,14 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!slider || !background) return;
 
   const slides = [...slider.querySelectorAll('[data-hero-slide]')];
-  const toggle = slider.querySelector('[data-hero-toggle]');
-  if (!slides.length || !toggle) return;
+  if (!slides.length) return;
 
   let activeIndex = slides.findIndex((slide) => slide.classList.contains('is-active'));
-  let paused = false;
 
   const showSlide = (index) => {
     activeIndex = (index + slides.length) % slides.length;
+    background.style.setProperty('--hero-image-offset', activeIndex === 0 ? '0px' : '20px');
     
     slides.forEach((slide, slideIndex) => {
       const active = slideIndex === activeIndex;
@@ -34,17 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   
   slides.forEach((slide, index) => slide.addEventListener('click', () => showSlide(index)));
-  toggle.addEventListener('click', () => {
-    paused = !paused;
-    toggle.textContent = paused ? 'Resume' : 'Pause';
-    toggle.setAttribute('aria-pressed', paused ? 'true' : 'false');
-    slider.classList.toggle('is-paused', paused);
-  });
 
   showSlide(Math.max(activeIndex, 0));
-  window.setInterval(() => {
-    if (!paused) showSlide(activeIndex + 1);
-  }, 5000);
+  window.setInterval(() => showSlide(activeIndex + 1), 5000);
 });
 
 document.addEventListener('DOMContentLoaded', () => {

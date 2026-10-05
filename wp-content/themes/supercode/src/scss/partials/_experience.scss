@@ -55,6 +55,12 @@
 .experience-section__cta span {
   font-size: 28px;
 }
+.experience-section__cta img {
+  display: block;
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
 .experience-tabs {
   display: flex;
   width: fit-content;

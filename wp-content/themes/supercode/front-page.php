@@ -80,8 +80,8 @@ get_header('home');
                         <?php
                         $hero_images = [
                             'hero-section-image-1.png',
-                            'urbnx-card.png',
-                            'klimbr-card.png',
+                            'hero-section-image-1.png',
+                            'hero-section-image-1.png',
                         ];
                         ?>
 
@@ -93,8 +93,6 @@ get_header('home');
                                 aria-pressed="<?php echo $slide === 0 ? 'true' : 'false'; ?>">
                             </button>
                         <?php endforeach; ?>
-                        <button class="hero-slider__toggle" type="button" data-hero-toggle
-                            aria-pressed="false">Pause</button>
                     </div>
                 </div>
             </div>
@@ -293,7 +291,7 @@ get_header('home');
             <p class="experience-section__description" data-experience-description>Most EV brands use generic
                 Chinese-made controllers. Ours is developed in-house - and extracts up to 1.92x the torque from the same
                 motor capacity. More pull. More efficiency. More control.</p>
-            <a class="experience-section__cta" href="#">Explore More <span aria-hidden="true">&#8599;</span></a>
+            <a class="experience-section__cta" href="#">Explore More <span aria-hidden="true"><img  src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/arrow.svg'); ?>"/></span></a>
         </div>
     </section>
     <!-- Support -->
