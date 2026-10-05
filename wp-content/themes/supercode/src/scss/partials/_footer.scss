@@ -1,0 +1,116 @@
+/* =========================
+   Footer
+========================= */
+.site-footer {
+  background: var(--color-2);
+  color: var(--color-4);
+}
+
+.site-footer__inner {
+  padding-block: 60px 60px;
+}
+
+.site-footer__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.site-footer__brand {
+  display: block;
+  width: min(338px, 28vw);
+}
+
+.site-footer__brand img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.site-footer__socials {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.site-footer__socials a {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border-radius: 2px;
+  background: var(--color-2);
+}
+
+.site-footer__socials img {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.site-footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 18px;
+  font: 500 14px/1.3 var(--font-2);
+  letter-spacing: 0.01em;
+  opacity: 0.4;
+}
+
+.site-footer__bottom p {
+  margin: 0;
+}
+
+.site-footer__bottom nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 22px;
+}
+
+.site-footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .site-footer__inner {
+    padding-block: 34px 22px;
+  }
+
+  .site-footer__top {
+    align-items: flex-start;
+    flex-direction: column;
+    padding-bottom: 32px;
+  }
+
+  .site-footer__brand {
+    width: min(240px, 70vw);
+  }
+
+  .site-footer__bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .site-footer__bottom nav {
+    justify-content: flex-start;
+    gap: 12px 18px;
+  }
+}
+
+
+perfect now i need container properties on hero section but only on those
+four areas which is hero-product which have klimbr photo
+the hero-title which have those two span
+and the hero-stats
+and Hero slides
+So these all four areas should have container properties but not the hero section as a whole.
+because when i zoom out or in the banner of main hero page might change its dimension but that should not happend
+with these four as my most section contains container so even if zoom out or in they behave the same intact and not change their dimension.

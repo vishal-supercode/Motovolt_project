@@ -366,6 +366,27 @@ get_header('home');
             </div>
         </div>
     </section>
+    <!-- Store locator -->
+    <section class="store-section" aria-labelledby="store-title">
+        <div class="container store-section__inner">
+            <div class="store-section__map">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/map.png'); ?>"
+                    alt="Map showing Motovolt store locations">
+            </div>
+            <div class="store-section__copy">
+                <h2 id="store-title">Find your <span>Motovolt Store</span></h2>
+                <p>Visit a Motovolt Experience Centre to explore our latest electric<br>cycles and smart mobility solutions.</p>
+                <a class="store-section__cta" href="tel:+910000000000"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/store-location-icon.png'); ?>" alt="phone">Request a call back</a>
+                <label class="store-section__select-label" for="store-city">Choose a city</label>
+                <select class="store-section__select" id="store-city" name="store-city">
+                    <option value="" selected>Select City</option>
+                    <option value="bengaluru">Bengaluru</option>
+                    <option value="mumbai">Mumbai</option>
+                    <option value="delhi">Delhi</option>
+                </select>
+            </div>
+        </div>
+    </section>
 </main>
 
 <?php
