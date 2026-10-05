@@ -35,9 +35,7 @@ get_header('home');
                         <li><a href="#">More</a></li>
                     </ul>
 
-                    <a href="#" class="hero-nav__cta">Book Now <img
-                            src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/arrow.svg'); ?>"
-                            alt="<?php bloginfo('name'); ?>"></a>
+                    <a href="#" class="hero-nav__cta"> Book Now <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/arrow.svg'); ?>" alt="<?php bloginfo('name'); ?>"></a>
                 </div>
 
             </nav>

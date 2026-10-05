@@ -963,7 +963,7 @@ body {
   /* Dark background while mouse is inside the section */
 }
 .bento-section:hover {
-  background: var(--color-2);
+  background: var(--color-3);
 }
 
 /* Grid */
