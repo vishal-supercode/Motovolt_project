@@ -35,7 +35,9 @@ get_header('home');
                         <li><a href="#">More</a></li>
                     </ul>
 
-                    <a href="#" class="hero-nav__cta"> Book Now <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/arrow.svg'); ?>" alt="<?php bloginfo('name'); ?>"></a>
+                    <a href="#" class="hero-nav__cta"> Book Now <img
+                            src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/arrow.svg'); ?>"
+                            alt="<?php bloginfo('name'); ?>"></a>
                 </div>
 
             </nav>
@@ -75,13 +77,22 @@ get_header('home');
 
                     <!-- Slider Indicators -->
                     <div class="hero-slider" data-hero-slider role="group" aria-label="Hero slides">
-                        <?php for ($slide = 0; $slide < 5; $slide++): ?>
+                        <?php
+                        $hero_images = [
+                            'hero-section-image-1.png',
+                            'urbnx-card.png',
+                            'klimbr-card.png',
+                        ];
+                        ?>
+
+                        <?php foreach ($hero_images as $slide => $image): ?>
                             <button class="hero-slider__line<?php echo $slide === 0 ? ' is-active' : ''; ?>" type="button"
                                 data-hero-slide="<?php echo esc_attr($slide); ?>"
-                                data-hero-image="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-section-image-1.png'); ?>"
+                                data-hero-image="<?php echo esc_url(get_template_directory_uri() . '/assets/images/' . $image); ?>"
                                 aria-label="Show slide <?php echo esc_attr($slide + 1); ?>"
-                                aria-pressed="<?php echo $slide === 0 ? 'true' : 'false'; ?>"></button>
-                        <?php endfor; ?>
+                                aria-pressed="<?php echo $slide === 0 ? 'true' : 'false'; ?>">
+                            </button>
+                        <?php endforeach; ?>
                         <button class="hero-slider__toggle" type="button" data-hero-toggle
                             aria-pressed="false">Pause</button>
                     </div>
@@ -282,7 +293,7 @@ get_header('home');
             <p class="experience-section__description" data-experience-description>Most EV brands use generic
                 Chinese-made controllers. Ours is developed in-house - and extracts up to 1.92x the torque from the same
                 motor capacity. More pull. More efficiency. More control.</p>
-            <a class="experience-section__cta" href="#">Explore More <span aria-hidden="true">↗</span></a>
+            <a class="experience-section__cta" href="#">Explore More <span aria-hidden="true">&#8599;</span></a>
         </div>
     </section>
     <!-- Support -->

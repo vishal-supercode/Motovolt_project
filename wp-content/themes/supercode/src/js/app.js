@@ -14,17 +14,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const showSlide = (index) => {
     activeIndex = (index + slides.length) % slides.length;
+    
     slides.forEach((slide, slideIndex) => {
       const active = slideIndex === activeIndex;
       slide.classList.toggle('is-active', active);
       slide.setAttribute('aria-pressed', active ? 'true' : 'false');
     });
-    background.src = slides[activeIndex].dataset.heroImage;
-    background.classList.remove('is-transitioning');
-    void background.offsetWidth;
-    background.classList.add('is-transitioning');
+    
+    const nextImage = slides[activeIndex].dataset.heroImage;
+    const preload = new Image();
+    
+    preload.onload = () => {
+      background.classList.remove('is-transitioning');
+      background.src = nextImage;
+      void background.offsetWidth;
+      background.classList.add('is-transitioning');
+    };
+    preload.src = nextImage;
   };
-
+  
   slides.forEach((slide, index) => slide.addEventListener('click', () => showSlide(index)));
   toggle.addEventListener('click', () => {
     paused = !paused;

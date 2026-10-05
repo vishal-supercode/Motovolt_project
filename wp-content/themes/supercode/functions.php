@@ -9,7 +9,7 @@
 
 if (!defined('_S_VERSION')) {
 	// Replace the version number of the theme on each release.
-	define('_S_VERSION', '1.0.1');
+	define('_S_VERSION', '1.0.2');
 }
 
 /**
@@ -152,9 +152,9 @@ function supercode_scripts()
 		'supercode-style',
 		get_template_directory_uri() . '/dist/css/app.min.css',
 		array('supercode-chakra-petch'),
-		_S_VERSION
+		filemtime(get_template_directory() . '/dist/js/app.min.js')
 	);
-	wp_enqueue_script('supercode-js', get_template_directory_uri() . '/dist/js/app.min.js', array(), _S_VERSION, true);
+	wp_enqueue_script('supercode-js', get_template_directory_uri() . '/dist/js/app.min.js', array(), filemtime(get_template_directory() . '/dist/js/app.min.js'), true);
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');
